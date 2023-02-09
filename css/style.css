@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat';
+}
+
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-size: 100%;
+    list-style-type: none;
+    background: white;
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: whitesmoke;
+    z-index: 10;
+    border-bottom: 4px solid yellow;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.logo {
+    font: 400 26px/100% 'Montserrat';
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 0 0 0 10px;
+    border-bottom: 4px solid yellow;
+    border-radius: 1%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.logo img {
+    width: 30px;
+    transform: scaleX(-1);
+    margin: 0 10px 0 0;
+
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.5s;
+}
+
+.menu ul li p {
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 2px solid whitesmoke;
+    transition: 0.5s;
+    text-align: center;
+
+}
+
+.menu ul li p:hover {
+    border-bottom: 1px solid #794c31;
+}
+
+.menu ul li p a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul li:hover {
+    transform: scale(1.1);
+
+}
+
+.user-menu ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.user-menu ul li img {
+    height: 18px;
+    margin: 4px 10px;
+    cursor: pointer;
+    transition: 0.5ms;
+}
+
+.user-menu ul li img:hover {
+    margin: 2px 8px;
+    height: 22px;
+}
+
+.menu-mobile {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    transition: 0.5s;
+}
+
+.menu-mobile ul {
+    display: none;
+}
+
+.menu-icon {
+    margin: 20px 10px;
+    width: 40px;
+    height: 40px;
+    background: url(/assets/img/icon/menu-icon.svg) 0 0/35px 35px no-repeat;
+}
+
+.menu-icon-close {
+    background: url(/assets/img/icon/close-icon.svg) 0 0/20px 20px no-repeat;
+}
+
+.menu-open {
+    width: 60%;
+    height: 100%;
+    background: whitesmoke;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 99, 71, 0) 0%,
+        rgba(255, 99, 71, 0) 76px,
+        whitesmoke 76px,
+        whitesmoke 100%
+  );
+}
+
+.menu-open ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #794c31;
+    padding: 0 0 10px 0;
+    margin: 0 10px;
+}
+
+
+.menu-open ul li p {
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 2px solid whitesmoke;
+    transition: 0.5s;
+}
+
+.menu-open ul li p:hover {
+    border-bottom: 1px solid #794c31;
+}
+
+.menu-open ul li p a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 980px) {
+    .menu-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .menu {
+        order: -1;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .logo {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 425px) {
+    .logo { 
+        transform: translateX(-70%);
+    }
+}
+
+
+/* Banner */
+.section-banner {
+    margin: 80px 0 80px 0;
+    width: 100%;
+}
+
+/* Collection */
+.section-collection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 80px 0;
+
+}
+
+.collection-content {
+    display: flex;
+    max-width: 1300px;
+    flex-direction: row-reverse;
+    border-right: 4px solid green;
+}
+
+.collection-content div {
+    padding: 20px;
+    width: 30%;
+}
+
+.collection-content div h4 {
+    border-bottom: 4px solid green;
+    width: 75%;
+    transition: 0.5s;
+}
+
+.collection-content div h4:hover {
+
+    width: 90%;
+}
+
+.collection-content div p {
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 30px 0;
+}
+
+.collection-content div button {
+    border: 1px solid white;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.collection-content div button:hover {
+    border: 1px solid green;
+
+}
+
+.collection-content figure {
+    width: 70%;
+}
+
+.collection-content figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 100%;
+}
+
+@media (max-width: 980px) {
+    .collection-content {
+        flex-direction: column;
+    }
+
+    .collection-content div {
+        width: 100%;
+    }
+
+    .collection-content figure {
+        width: 100%;
+    }
+
+    .collection-content figure img {
+        height: auto;
+        padding: 0 20px;
+    }
+}
+
+/* Highlight  */
+.section-highlight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+.highlight-content {
+    display: flex;
+    max-width: 1300px;
+    width: 100%;
+    flex-direction: column;
+    border-right: 4px solid yellow;
+
+}
+
+.highlight-content>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.highlight-content h4 {
+    border-bottom: 4px solid yellow;
+    width: 50%;
+    margin: 20px 10px;
+}
+
+.highlight-content h4:hover {
+    width: 80%;
+    transition: 0.5s;
+}
+
+.highlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 1%;
+    border-bottom: 1px solid yellow;
+
+}
+
+.highlight-card h5 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.highlight-card p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.highlight-card img {
+    max-width: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1% 1% 0 0;
+    border-bottom: 3px solid rgb(255, 255, 255, 0%);
+    border-top: 3px solid rgb(255, 255, 255, 0%);
+    transition: 0.5s;
+}
+
+.highlight-card img:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media (max-width: 980px) {
+    .highlight-content>div {
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+}
+
+
+/* shelf */
+.section-shelf {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px 0;
+}
+
+.shelf-content {
+    display: flex;
+    max-width: 1300px;
+    width: 100%;
+    flex-direction: column;
+    border-right: 4px solid blue;
+}
+
+.shelf-row-1 {
+    width: 100%;
+    padding: 30px 0 10px 0;
+}
+
+.shelf-row-1 figure,
+.shelf-row-2 figure {
+    position: relative;
+}
+
+.shelf-row-1 div,
+.shelf-row-2 div {
+    position: absolute;
+}
+
+.shelf-row-1 div {
+    bottom: 60px;
+    left: 60px;
+    width: 480px;
+    background: rgb(252, 252, 252, 0.8);
+    padding: 20px;
+}
+
+.shelf-row-1 div h4,
+.shelf-row-2 div h4 {
+    font-size: 16px;
+    border-bottom: 4px solid blue;
+    width: 300px;
+    transition: 0.5s;
+}
+
+.shelf-row-1 div h4:hover,
+.shelf-row-2 div h4:hover {
+    width: 400px;
+}
+
+.shelf-row-1 div p,
+.shelf-row-2 div p {
+    padding: 20px 0 0 0;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+
+.shelf-row-1 div button,
+.shelf-row-2 div button {
+    border: 1px solid rgb(252, 252, 252, 0);
+    padding: 15px;
+    transition: 0.5s;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.shelf-row-1 div button:hover,
+.shelf-row-2 div button:hover {
+    border: 1px solid blue;
+}
+
+.shelf-row-1 img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.shelf-row-2 {
+    display: flex;
+    padding: 10px 0 30px 0;
+    gap: 20px;
+}
+
+.shelf-row-2 .figure-1 div {
+    bottom: 30px;
+    right: 0;
+    width: 480px;
+    background: rgb(252, 252, 252, 0.8);
+    padding: 20px;
+}
+
+.shelf-row-2 .figure-2 div {
+    bottom: 30px;
+    left: 0;
+    width: 480px;
+    background: rgb(252, 252, 252, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.shelf-row-2 .figure-2 div p {
+    text-align: end;
+}
+
+.shelf-row-2 .figure-2 div h4 {
+    text-align: end;
+}
+
+.shelf-row-2 figure {
+    width: 50%;
+}
+
+.shelf-row-2 figure img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 980px) {
+    .shelf-row-2 {
+        flex-direction: column;
+    }
+
+    .shelf-row-2 figure {
+        width: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .shelf-row-1 div {
+        left: 0;
+        width: 80%;
+    }
+
+    .shelf-row-1 div h4,
+    .shelf-row-2 div h4 {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .shelf-row-2 .figure-1 div,
+    .shelf-row-2 .figure-2 div {
+        width: 100%;
+    }
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: whitesmoke;
+    padding: 50px 20px 20px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+.footer-content {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 0 20px;
+}
+
+.footer-content ul {
+
+    list-style: none;
+    font-size: 10px;
+}
+
+.footer-content ul li {
+    font-size: 13px;
+    cursor: pointer;
+    padding: 3px 0;
+}
+
+.footer-content ul li a {
+    color: black;
+}
+
+.footer-content ul li:hover {
+    color: #794c31;
+}
+
+.footer-content ul li:first-child {
+    font-size: 16px;
+    padding: 0 0 13px 0;
+    font-family: 'Montserrat';
+}
+
+.footer-content ul li:first-child:hover {
+    cursor: default;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* carousel */
+.carousel-cell {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-cell img {
+    width: 100%;
+    height: 450px;
+    max-width: 1300px;
+    object-fit: cover;
+    object-position: 50% 25%;
+
+}
